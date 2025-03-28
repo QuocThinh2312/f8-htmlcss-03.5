@@ -256,3 +256,74 @@ button {
     right: 29.12px;
     bottom: -29.06px;
 }
+
+/* Brand */
+.brand {
+    margin: 42.31px 0 106px;
+}
+
+.brand__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 76px 0 77px;
+    border-radius: 999px;
+    background: #e2eddf;
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+}
+
+.brand__list .brand-item:first-child {
+    margin-right: 47px;
+}
+
+.brand__list .brand-item:first-child .brand-item__name {
+    color: #143c3c;
+    font-size: 3.1rem;
+    font-weight: 500;
+}
+
+.brand__list .brand-item:nth-child(2) {
+    gap: 3px;
+    margin-right: 51px;
+}
+
+.brand__list .brand-item:nth-child(2) .brand-item__name {
+    color: #143c3c;
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.brand__list .brand-item:nth-child(3) {
+    gap: 14px;
+    margin-right: 64px;
+}
+
+.brand__list .brand-item:nth-child(3) .brand-item__name {
+    color: #163c35;
+    font-size: 2.6rem;
+}
+
+.brand__list .brand-item:nth-child(4) {
+    margin-right: 63px;
+}
+
+.brand__list .brand-item:nth-child(4) .brand-item__name {
+    color: #143c3c;
+    font-family: "Sonsie One", sans-serif;
+    font-size: 2.3rem;
+}
+
+.brand__list .brand-item:last-child {
+    gap: 10px;
+}
+
+.brand__list .brand-item:last-child .brand-item__name {
+    color: #143c3c;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1995rem;
+}
