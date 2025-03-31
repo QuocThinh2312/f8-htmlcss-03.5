@@ -6,7 +6,7 @@
 
 :root {
     --primary-color: #152427;
-    --secondary-color: #7d8188;
+    --secondary-color: #143c3c;
 }
 
 html,
@@ -48,10 +48,10 @@ button {
     align-items: center;
     min-width: 173px;
     height: 57px;
-    border: 1.5px solid #143c3c;
+    border: 1.5px solid var(--secondary-color);
     border-radius: 999px;
 
-    background: #143c3c;
+    background: var(--secondary-color);
     color: #fff;
 
     font-family: "Public Sans", sans-serif;
@@ -219,7 +219,7 @@ button {
 }
 
 .hero__watch:hover .hero__watch-icon {
-    background: #143c3c;
+    background: var(--secondary-color);
 }
 
 .hero__watch-icon {
@@ -238,9 +238,9 @@ button {
     position: absolute;
     left: -7px;
     display: block;
-    width: calc(100% + 7px);
-    height: calc(100% + 7px);
-    border: 4px solid #143c3c;
+    width: 57px;
+    height: 59px;
+    border: 4px solid var(--secondary-color);
     border-radius: 50%;
     -webkit-clip-path: inset(0 50% 0 0);
     clip-path: inset(0 50% 0 0);
@@ -337,7 +337,7 @@ button {
 }
 
 .brand__list .brand-item:first-child .brand-item__name {
-    color: #143c3c;
+    color: var(--secondary-color);
     font-size: 3.1rem;
     font-weight: 500;
 }
@@ -348,7 +348,7 @@ button {
 }
 
 .brand__list .brand-item:nth-child(2) .brand-item__name {
-    color: #143c3c;
+    color: var(--secondary-color);
     font-size: 3.2rem;
     font-weight: 600;
 }
@@ -368,7 +368,7 @@ button {
 }
 
 .brand__list .brand-item:nth-child(4) .brand-item__name {
-    color: #143c3c;
+    color: var(--secondary-color);
     font-family: "Sonsie One", sans-serif;
     font-size: 2.3rem;
 }
@@ -378,7 +378,7 @@ button {
 }
 
 .brand__list .brand-item:last-child .brand-item__name {
-    color: #143c3c;
+    color: var(--secondary-color);
     font-size: 1.9rem;
     font-weight: 600;
     letter-spacing: 0.1995rem;
@@ -422,7 +422,7 @@ button {
 }
 
 .service__control-btn:hover {
-    background: #143c3c;
+    background: var(--secondary-color);
     color: #fff;
     cursor: pointer;
 }
@@ -617,7 +617,7 @@ button {
     height: 11px;
     border: 3px solid #eaeaea;
     border-radius: 50%;
-    background: #143c3c;
+    background: var(--secondary-color);
 }
 
 .about-summary__loading {
@@ -653,4 +653,134 @@ button {
     border: 1px solid #fff;
     border-radius: 50%;
     margin-right: -6px;
+}
+
+/* Process */
+.process {
+    padding-top: 36px;
+    margin-bottom: 148px;
+}
+
+.process__subheading {
+    max-width: 477px;
+    margin-top: 20px;
+}
+
+.section-subheading::after {
+    bottom: 18px;
+    left: 430px;
+}
+
+.process__list {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 81px;
+}
+
+.process-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 46px 41px 21px 20px;
+    border-radius: 33px;
+}
+
+.process-item:hover {
+    padding-top: 0;
+    padding-left: 30px;
+    background: #e2eddf;
+    transition: all 0.5s ease;
+}
+
+.process-item:nth-child(2)::before,
+.process-item:last-child::before,
+.process-item:last-child::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    z-index: 1;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        180deg,
+        #83a17d 4.17%,
+        rgba(131, 161, 125, 0) 36.46%
+    );
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+.process-item:last-child::after {
+    inset: auto auto -3px 0;
+}
+
+.process-item:hover::before,
+.process-item:last-child:hover::after,
+.process-item:hover + ::before,
+.process-item:hover .process-item__desc {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.process-item__step {
+    width: 109px;
+    margin-right: 49px;
+    color: var(--secondary-color);
+    font-size: 7.2rem;
+    font-weight: 600;
+    line-height: 5.2rem;
+}
+
+.process-item__desc {
+    max-width: 572px;
+    margin-left: auto;
+    color: #7d8188;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.process-item__title {
+    position: relative;
+}
+
+.process-item__title::after {
+    content: "Learn More";
+    position: absolute;
+    bottom: -37px;
+    left: 0;
+    color: #575d5e;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.process-item:hover .process-item__title::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.process-item__img {
+    position: absolute;
+    inset: auto 92px 0 auto;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease;
+    transform: scale(0.5);
+    transform-origin: 0% 100%;
+}
+
+.process-item:hover .process-item__img {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }
