@@ -479,6 +479,7 @@ button {
 
 .service-item__title {
     margin-bottom: 18px;
+    line-height: normal;
 }
 
 .service-item__desc {
