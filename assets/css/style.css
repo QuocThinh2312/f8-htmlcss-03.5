@@ -487,6 +487,10 @@ button {
 }
 
 /* About */
+#about {
+    scroll-margin-top: 100px;
+}
+
 .about {
     margin-bottom: 79px;
 }
@@ -943,6 +947,10 @@ button {
 }
 
 /* Blog */
+#blog {
+    scroll-margin-top: 100px;
+}
+
 .blog {
     margin-bottom: 102px;
 }
